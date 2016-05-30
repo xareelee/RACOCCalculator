@@ -1,0 +1,46 @@
+PODS:
+  - Expecta (1.0.5)
+  - Expecta+OCMock (2.1.0):
+    - Expecta
+    - OCMock
+  - KIF (3.4.2):
+    - KIF/Core (= 3.4.2)
+  - KIF/Core (3.4.2)
+  - OCMock (3.3)
+  - ReactiveCocoa (4.1.0):
+    - ReactiveCocoa/UI (= 4.1.0)
+    - Result (~> 2.0)
+  - ReactiveCocoa/Core (4.1.0):
+    - ReactiveCocoa/no-arc
+    - Result (~> 2.0)
+  - ReactiveCocoa/no-arc (4.1.0):
+    - Result (~> 2.0)
+  - ReactiveCocoa/UI (4.1.0):
+    - ReactiveCocoa/Core
+    - Result (~> 2.0)
+  - Result (2.0.0)
+  - Specta (1.0.5)
+  - XLTestLog (1.0.1)
+
+DEPENDENCIES:
+  - Expecta
+  - Expecta+OCMock
+  - KIF
+  - OCMock
+  - ReactiveCocoa
+  - Specta
+  - XLTestLog
+
+SPEC CHECKSUMS:
+  Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
+  Expecta+OCMock: b1540f747b584742e488889d1b4deea5bc4a8e39
+  KIF: b518c9831453abea5afdbbde3908ec47832d6d56
+  OCMock: d68685bde31f69cb61d518dcb39269080c78b5ed
+  ReactiveCocoa: d70004d7a366a7b8e87e60ce2347182c77701949
+  Result: 9e75e1111c774c6ac594e14907b15057053a7959
+  Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
+  XLTestLog: d821a5bcae48d9de21c9e12272e49e02f509cb74
+
+PODFILE CHECKSUM: 9bf4ea974d3c8f1437181d02513040fd07b8a684
+
+COCOAPODS: 1.0.0

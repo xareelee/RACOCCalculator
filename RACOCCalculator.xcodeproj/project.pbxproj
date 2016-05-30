@@ -14,6 +14,8 @@
 		1159F8041CFBD1C500EFEA20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1159F8031CFBD1C500EFEA20 /* Assets.xcassets */; };
 		1159F8071CFBD1C500EFEA20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1159F8051CFBD1C500EFEA20 /* LaunchScreen.storyboard */; };
 		1159F8121CFBD1C500EFEA20 /* RACOCCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1159F8111CFBD1C500EFEA20 /* RACOCCalculatorTests.m */; };
+		7B01A44AA534E4AE451D632E /* Pods_RACOCCalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DADE94A213E1BCA07B04114 /* Pods_RACOCCalculatorTests.framework */; };
+		AE15E95615492DEDB5011509 /* Pods_RACOCCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 716D922DAC5E86B20938AE71 /* Pods_RACOCCalculator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,12 @@
 		1159F80D1CFBD1C500EFEA20 /* RACOCCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RACOCCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1159F8111CFBD1C500EFEA20 /* RACOCCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOCCalculatorTests.m; sourceTree = "<group>"; };
 		1159F8131CFBD1C500EFEA20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		196D58FFA84E881ED09D8227 /* Pods-RACOCCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACOCCalculatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACOCCalculatorTests/Pods-RACOCCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		247723EACEFCEECFC8D74F55 /* Pods-RACOCCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACOCCalculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACOCCalculator/Pods-RACOCCalculator.release.xcconfig"; sourceTree = "<group>"; };
+		3DADE94A213E1BCA07B04114 /* Pods_RACOCCalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACOCCalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		716D922DAC5E86B20938AE71 /* Pods_RACOCCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACOCCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		746292FA174EC51F59634685 /* Pods-RACOCCalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACOCCalculatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACOCCalculatorTests/Pods-RACOCCalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		B1ABE5B7224F1F6958F301B0 /* Pods-RACOCCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACOCCalculator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACOCCalculator/Pods-RACOCCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE15E95615492DEDB5011509 /* Pods_RACOCCalculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B01A44AA534E4AE451D632E /* Pods_RACOCCalculatorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +76,8 @@
 				1159F7F61CFBD1C500EFEA20 /* RACOCCalculator */,
 				1159F8101CFBD1C500EFEA20 /* RACOCCalculatorTests */,
 				1159F7F51CFBD1C500EFEA20 /* Products */,
+				73D49A669B4FA8D918C5A4B9 /* Pods */,
+				40D00DDFF92F6940E77C07EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +123,26 @@
 			path = RACOCCalculatorTests;
 			sourceTree = "<group>";
 		};
+		40D00DDFF92F6940E77C07EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				716D922DAC5E86B20938AE71 /* Pods_RACOCCalculator.framework */,
+				3DADE94A213E1BCA07B04114 /* Pods_RACOCCalculatorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73D49A669B4FA8D918C5A4B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1ABE5B7224F1F6958F301B0 /* Pods-RACOCCalculator.debug.xcconfig */,
+				247723EACEFCEECFC8D74F55 /* Pods-RACOCCalculator.release.xcconfig */,
+				196D58FFA84E881ED09D8227 /* Pods-RACOCCalculatorTests.debug.xcconfig */,
+				746292FA174EC51F59634685 /* Pods-RACOCCalculatorTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1159F8161CFBD1C500EFEA20 /* Build configuration list for PBXNativeTarget "RACOCCalculator" */;
 			buildPhases = (
+				92710823E378B88AB3CCA04C /* 📦 Check Pods Manifest.lock */,
 				1159F7F01CFBD1C500EFEA20 /* Sources */,
 				1159F7F11CFBD1C500EFEA20 /* Frameworks */,
 				1159F7F21CFBD1C500EFEA20 /* Resources */,
+				291B868FEBA5D2EE02582147 /* 📦 Embed Pods Frameworks */,
+				577D0C8B880FFA67AE7E34DC /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,9 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1159F8191CFBD1C500EFEA20 /* Build configuration list for PBXNativeTarget "RACOCCalculatorTests" */;
 			buildPhases = (
+				3F26A5719D41C66BFC1B9018 /* 📦 Check Pods Manifest.lock */,
 				1159F8091CFBD1C500EFEA20 /* Sources */,
 				1159F80A1CFBD1C500EFEA20 /* Frameworks */,
 				1159F80B1CFBD1C500EFEA20 /* Resources */,
+				691638C5E97F7F2C1B041952 /* 📦 Embed Pods Frameworks */,
+				94B546EE226283CF7760BD2E /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,6 +243,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		291B868FEBA5D2EE02582147 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RACOCCalculator/Pods-RACOCCalculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F26A5719D41C66BFC1B9018 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		577D0C8B880FFA67AE7E34DC /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RACOCCalculator/Pods-RACOCCalculator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		691638C5E97F7F2C1B041952 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RACOCCalculatorTests/Pods-RACOCCalculatorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92710823E378B88AB3CCA04C /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		94B546EE226283CF7760BD2E /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RACOCCalculatorTests/Pods-RACOCCalculatorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1159F7F01CFBD1C500EFEA20 /* Sources */ = {
@@ -339,6 +470,7 @@
 		};
 		1159F8171CFBD1C500EFEA20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1ABE5B7224F1F6958F301B0 /* Pods-RACOCCalculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RACOCCalculator/Info.plist;
@@ -350,6 +482,7 @@
 		};
 		1159F8181CFBD1C500EFEA20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 247723EACEFCEECFC8D74F55 /* Pods-RACOCCalculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RACOCCalculator/Info.plist;
@@ -361,6 +494,7 @@
 		};
 		1159F81A1CFBD1C500EFEA20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 196D58FFA84E881ED09D8227 /* Pods-RACOCCalculatorTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RACOCCalculatorTests/Info.plist;
@@ -373,6 +507,7 @@
 		};
 		1159F81B1CFBD1C500EFEA20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 746292FA174EC51F59634685 /* Pods-RACOCCalculatorTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RACOCCalculatorTests/Info.plist;
@@ -402,6 +537,7 @@
 				1159F8181CFBD1C500EFEA20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1159F8191CFBD1C500EFEA20 /* Build configuration list for PBXNativeTarget "RACOCCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +546,7 @@
 				1159F81B1CFBD1C500EFEA20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
