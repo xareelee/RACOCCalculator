@@ -13,7 +13,7 @@
 		1159F8021CFBD1C500EFEA20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1159F8001CFBD1C500EFEA20 /* Main.storyboard */; };
 		1159F8041CFBD1C500EFEA20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1159F8031CFBD1C500EFEA20 /* Assets.xcassets */; };
 		1159F8071CFBD1C500EFEA20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1159F8051CFBD1C500EFEA20 /* LaunchScreen.storyboard */; };
-		1159F8121CFBD1C500EFEA20 /* RACOCCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1159F8111CFBD1C500EFEA20 /* RACOCCalculatorTests.m */; };
+		1159F81D1CFBD39000EFEA20 /* CalculatorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1159F81C1CFBD39000EFEA20 /* CalculatorSpec.m */; };
 		7B01A44AA534E4AE451D632E /* Pods_RACOCCalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DADE94A213E1BCA07B04114 /* Pods_RACOCCalculatorTests.framework */; };
 		AE15E95615492DEDB5011509 /* Pods_RACOCCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 716D922DAC5E86B20938AE71 /* Pods_RACOCCalculator.framework */; };
 /* End PBXBuildFile section */
@@ -40,8 +40,8 @@
 		1159F8061CFBD1C500EFEA20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1159F8081CFBD1C500EFEA20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1159F80D1CFBD1C500EFEA20 /* RACOCCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RACOCCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1159F8111CFBD1C500EFEA20 /* RACOCCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOCCalculatorTests.m; sourceTree = "<group>"; };
 		1159F8131CFBD1C500EFEA20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1159F81C1CFBD39000EFEA20 /* CalculatorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorSpec.m; sourceTree = "<group>"; };
 		196D58FFA84E881ED09D8227 /* Pods-RACOCCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACOCCalculatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACOCCalculatorTests/Pods-RACOCCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		247723EACEFCEECFC8D74F55 /* Pods-RACOCCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACOCCalculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACOCCalculator/Pods-RACOCCalculator.release.xcconfig"; sourceTree = "<group>"; };
 		3DADE94A213E1BCA07B04114 /* Pods_RACOCCalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACOCCalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,7 +117,7 @@
 		1159F8101CFBD1C500EFEA20 /* RACOCCalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				1159F8111CFBD1C500EFEA20 /* RACOCCalculatorTests.m */,
+				1159F81C1CFBD39000EFEA20 /* CalculatorSpec.m */,
 				1159F8131CFBD1C500EFEA20 /* Info.plist */,
 			);
 			path = RACOCCalculatorTests;
@@ -352,7 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1159F8121CFBD1C500EFEA20 /* RACOCCalculatorTests.m in Sources */,
+				1159F81D1CFBD39000EFEA20 /* CalculatorSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
