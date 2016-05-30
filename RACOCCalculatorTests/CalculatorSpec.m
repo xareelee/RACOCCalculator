@@ -18,6 +18,17 @@ describe(@"Calculator", ^{
   
   context(@"when it is initialized", ^{
     
+    __block NSTimeInterval originalTimeout;
+    
+    beforeAll(^{
+      originalTimeout = [KIFTestActor defaultTimeout];
+      [KIFTestActor setDefaultTimeout:0.1];
+    });
+    
+    afterAll(^{
+      [KIFTestActor setDefaultTimeout:originalTimeout];
+    });
+    
     it(@"should show the UI element 0", ^{
       [tester waitForViewWithAccessibilityLabel:@"0"];
     });
