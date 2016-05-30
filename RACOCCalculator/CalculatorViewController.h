@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface CalculatorViewController : UIViewController
 
+- (void)resetCalculater;
+
+- (void)resetCurrentValue:(NSString *)numberString;
 
 @end
 

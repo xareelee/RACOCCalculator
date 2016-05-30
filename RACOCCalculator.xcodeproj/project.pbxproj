@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11521D981CFDFEF300074DA0 /* CalculatorArithmeticSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 11521D971CFDFEF300074DA0 /* CalculatorArithmeticSpec.m */; };
 		1159F7F91CFBD1C500EFEA20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1159F7F81CFBD1C500EFEA20 /* main.m */; };
 		1159F7FC1CFBD1C500EFEA20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1159F7FB1CFBD1C500EFEA20 /* AppDelegate.m */; };
-		1159F7FF1CFBD1C500EFEA20 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1159F7FE1CFBD1C500EFEA20 /* ViewController.m */; };
+		1159F7FF1CFBD1C500EFEA20 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1159F7FE1CFBD1C500EFEA20 /* CalculatorViewController.m */; };
 		1159F8021CFBD1C500EFEA20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1159F8001CFBD1C500EFEA20 /* Main.storyboard */; };
 		1159F8041CFBD1C500EFEA20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1159F8031CFBD1C500EFEA20 /* Assets.xcassets */; };
 		1159F8071CFBD1C500EFEA20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1159F8051CFBD1C500EFEA20 /* LaunchScreen.storyboard */; };
-		1159F81D1CFBD39000EFEA20 /* CalculatorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1159F81C1CFBD39000EFEA20 /* CalculatorSpec.m */; };
+		1159F81D1CFBD39000EFEA20 /* CalculatorComplexInputSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1159F81C1CFBD39000EFEA20 /* CalculatorComplexInputSpec.m */; };
+		11F99D971CFC1D05006C0569 /* CalculatorUISpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F99D961CFC1D05006C0569 /* CalculatorUISpec.m */; };
+		11F99D991CFC1DD6006C0569 /* CalculatorSingleButtonFunctionalitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F99D981CFC1DD6006C0569 /* CalculatorSingleButtonFunctionalitySpec.m */; };
+		11F99D9C1CFC1FC2006C0569 /* TestRootViewSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F99D9B1CFC1FC2006C0569 /* TestRootViewSetup.m */; };
+		11F99DA01CFC2283006C0569 /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F99D9F1CFC2283006C0569 /* TestHelper.m */; };
+		11F99DA31CFC312C006C0569 /* DevRunningBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F99DA21CFC312C006C0569 /* DevRunningBlock.m */; };
+		11F99DA61CFC349A006C0569 /* TestSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F99DA51CFC349A006C0569 /* TestSetup.m */; };
+		11F99DAA1CFC48A8006C0569 /* RACMergeChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F99DA91CFC48A8006C0569 /* RACMergeChannel.m */; };
 		7B01A44AA534E4AE451D632E /* Pods_RACOCCalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DADE94A213E1BCA07B04114 /* Pods_RACOCCalculatorTests.framework */; };
 		AE15E95615492DEDB5011509 /* Pods_RACOCCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 716D922DAC5E86B20938AE71 /* Pods_RACOCCalculator.framework */; };
 /* End PBXBuildFile section */
@@ -29,19 +37,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		111FB6BD1CFD8E7F00FCA408 /* RACOCCalculator-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACOCCalculator-Prefix.pch"; sourceTree = "<group>"; };
+		11521D971CFDFEF300074DA0 /* CalculatorArithmeticSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorArithmeticSpec.m; sourceTree = "<group>"; };
 		1159F7F41CFBD1C500EFEA20 /* RACOCCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACOCCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1159F7F81CFBD1C500EFEA20 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1159F7FA1CFBD1C500EFEA20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1159F7FB1CFBD1C500EFEA20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1159F7FD1CFBD1C500EFEA20 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1159F7FE1CFBD1C500EFEA20 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1159F7FD1CFBD1C500EFEA20 /* CalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
+		1159F7FE1CFBD1C500EFEA20 /* CalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
 		1159F8011CFBD1C500EFEA20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1159F8031CFBD1C500EFEA20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1159F8061CFBD1C500EFEA20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1159F8081CFBD1C500EFEA20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1159F80D1CFBD1C500EFEA20 /* RACOCCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RACOCCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1159F8131CFBD1C500EFEA20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1159F81C1CFBD39000EFEA20 /* CalculatorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorSpec.m; sourceTree = "<group>"; };
+		1159F81C1CFBD39000EFEA20 /* CalculatorComplexInputSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorComplexInputSpec.m; sourceTree = "<group>"; };
+		11F99D961CFC1D05006C0569 /* CalculatorUISpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorUISpec.m; sourceTree = "<group>"; };
+		11F99D981CFC1DD6006C0569 /* CalculatorSingleButtonFunctionalitySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorSingleButtonFunctionalitySpec.m; sourceTree = "<group>"; };
+		11F99D9A1CFC1FC2006C0569 /* TestRootViewSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRootViewSetup.h; sourceTree = "<group>"; };
+		11F99D9B1CFC1FC2006C0569 /* TestRootViewSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestRootViewSetup.m; sourceTree = "<group>"; };
+		11F99D9E1CFC2283006C0569 /* TestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHelper.h; sourceTree = "<group>"; };
+		11F99D9F1CFC2283006C0569 /* TestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHelper.m; sourceTree = "<group>"; };
+		11F99DA11CFC312C006C0569 /* DevRunningBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevRunningBlock.h; sourceTree = "<group>"; };
+		11F99DA21CFC312C006C0569 /* DevRunningBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevRunningBlock.m; sourceTree = "<group>"; };
+		11F99DA51CFC349A006C0569 /* TestSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSetup.m; sourceTree = "<group>"; };
+		11F99DA81CFC48A8006C0569 /* RACMergeChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACMergeChannel.h; sourceTree = "<group>"; };
+		11F99DA91CFC48A8006C0569 /* RACMergeChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACMergeChannel.m; sourceTree = "<group>"; };
 		196D58FFA84E881ED09D8227 /* Pods-RACOCCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACOCCalculatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACOCCalculatorTests/Pods-RACOCCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		247723EACEFCEECFC8D74F55 /* Pods-RACOCCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACOCCalculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACOCCalculator/Pods-RACOCCalculator.release.xcconfig"; sourceTree = "<group>"; };
 		3DADE94A213E1BCA07B04114 /* Pods_RACOCCalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACOCCalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +91,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11521D991CFDFEFE00074DA0 /* Spec */ = {
+			isa = PBXGroup;
+			children = (
+				11F99D961CFC1D05006C0569 /* CalculatorUISpec.m */,
+				11F99D981CFC1DD6006C0569 /* CalculatorSingleButtonFunctionalitySpec.m */,
+				1159F81C1CFBD39000EFEA20 /* CalculatorComplexInputSpec.m */,
+				11521D971CFDFEF300074DA0 /* CalculatorArithmeticSpec.m */,
+			);
+			name = Spec;
+			sourceTree = "<group>";
+		};
 		1159F7EB1CFBD1C500EFEA20 = {
 			isa = PBXGroup;
 			children = (
@@ -95,13 +127,17 @@
 			children = (
 				1159F7FA1CFBD1C500EFEA20 /* AppDelegate.h */,
 				1159F7FB1CFBD1C500EFEA20 /* AppDelegate.m */,
-				1159F7FD1CFBD1C500EFEA20 /* ViewController.h */,
-				1159F7FE1CFBD1C500EFEA20 /* ViewController.m */,
+				1159F7FD1CFBD1C500EFEA20 /* CalculatorViewController.h */,
+				1159F7FE1CFBD1C500EFEA20 /* CalculatorViewController.m */,
+				1159F7F71CFBD1C500EFEA20 /* Supporting Files */,
 				1159F8001CFBD1C500EFEA20 /* Main.storyboard */,
 				1159F8031CFBD1C500EFEA20 /* Assets.xcassets */,
 				1159F8051CFBD1C500EFEA20 /* LaunchScreen.storyboard */,
 				1159F8081CFBD1C500EFEA20 /* Info.plist */,
-				1159F7F71CFBD1C500EFEA20 /* Supporting Files */,
+				11F99DA11CFC312C006C0569 /* DevRunningBlock.h */,
+				11F99DA21CFC312C006C0569 /* DevRunningBlock.m */,
+				11F99DA81CFC48A8006C0569 /* RACMergeChannel.h */,
+				11F99DA91CFC48A8006C0569 /* RACMergeChannel.m */,
 			);
 			path = RACOCCalculator;
 			sourceTree = "<group>";
@@ -110,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				1159F7F81CFBD1C500EFEA20 /* main.m */,
+				111FB6BD1CFD8E7F00FCA408 /* RACOCCalculator-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -117,10 +154,31 @@
 		1159F8101CFBD1C500EFEA20 /* RACOCCalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				1159F81C1CFBD39000EFEA20 /* CalculatorSpec.m */,
+				11F99DA41CFC3488006C0569 /* Setup */,
+				11F99D9D1CFC226D006C0569 /* Helper */,
+				11521D991CFDFEFE00074DA0 /* Spec */,
 				1159F8131CFBD1C500EFEA20 /* Info.plist */,
 			);
 			path = RACOCCalculatorTests;
+			sourceTree = "<group>";
+		};
+		11F99D9D1CFC226D006C0569 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				11F99D9A1CFC1FC2006C0569 /* TestRootViewSetup.h */,
+				11F99D9B1CFC1FC2006C0569 /* TestRootViewSetup.m */,
+				11F99D9E1CFC2283006C0569 /* TestHelper.h */,
+				11F99D9F1CFC2283006C0569 /* TestHelper.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		11F99DA41CFC3488006C0569 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				11F99DA51CFC349A006C0569 /* TestSetup.m */,
+			);
+			name = Setup;
 			sourceTree = "<group>";
 		};
 		40D00DDFF92F6940E77C07EE /* Frameworks */ = {
@@ -342,9 +400,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1159F7FF1CFBD1C500EFEA20 /* ViewController.m in Sources */,
+				1159F7FF1CFBD1C500EFEA20 /* CalculatorViewController.m in Sources */,
 				1159F7FC1CFBD1C500EFEA20 /* AppDelegate.m in Sources */,
 				1159F7F91CFBD1C500EFEA20 /* main.m in Sources */,
+				11F99DAA1CFC48A8006C0569 /* RACMergeChannel.m in Sources */,
+				11F99DA31CFC312C006C0569 /* DevRunningBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +412,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1159F81D1CFBD39000EFEA20 /* CalculatorSpec.m in Sources */,
+				11F99D991CFC1DD6006C0569 /* CalculatorSingleButtonFunctionalitySpec.m in Sources */,
+				1159F81D1CFBD39000EFEA20 /* CalculatorComplexInputSpec.m in Sources */,
+				11F99D9C1CFC1FC2006C0569 /* TestRootViewSetup.m in Sources */,
+				11521D981CFDFEF300074DA0 /* CalculatorArithmeticSpec.m in Sources */,
+				11F99D971CFC1D05006C0569 /* CalculatorUISpec.m in Sources */,
+				11F99DA01CFC2283006C0569 /* TestHelper.m in Sources */,
+				11F99DA61CFC349A006C0569 /* TestSetup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +539,7 @@
 			baseConfigurationReference = B1ABE5B7224F1F6958F301B0 /* Pods-RACOCCalculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RACOCCalculator/RACOCCalculator-Prefix.pch";
 				INFOPLIST_FILE = RACOCCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xaree.lee.RACOCCalculator;
@@ -485,6 +552,7 @@
 			baseConfigurationReference = 247723EACEFCEECFC8D74F55 /* Pods-RACOCCalculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RACOCCalculator/RACOCCalculator-Prefix.pch";
 				INFOPLIST_FILE = RACOCCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xaree.lee.RACOCCalculator;
@@ -497,6 +565,13 @@
 			baseConfigurationReference = 196D58FFA84E881ED09D8227 /* Pods-RACOCCalculatorTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"TEST=1",
+				);
 				INFOPLIST_FILE = RACOCCalculatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xaree.lee.RACOCCalculatorTests;
@@ -510,6 +585,13 @@
 			baseConfigurationReference = 746292FA174EC51F59634685 /* Pods-RACOCCalculatorTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"TEST=1",
+				);
 				INFOPLIST_FILE = RACOCCalculatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xaree.lee.RACOCCalculatorTests;

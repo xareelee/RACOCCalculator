@@ -1,6 +1,6 @@
 //
-//  CalculatorSpec.m
-//  RACObjCCalculator
+//  CalculatorUISpec.m
+//  RACOCCalculator
 //
 //  Created by Xaree on 5/30/16.
 //  Copyright © 2016 Xaree Lee. All rights reserved.
@@ -10,20 +10,28 @@
 #import <Expecta/Expecta.h>
 #import <KIF/KIF.h>
 
+#import "TestRootViewSetup.h"
 
-SpecBegin(Calculator)
 
+SpecBegin(CalculatorUI)
 
 describe(@"Calculator", ^{
   
+  __block CalculatorViewController *calculatorVC;
+  __block NSTimeInterval originalTimeout;
+
+  beforeAll(^{
+    calculatorVC = [TestRootViewSetup setupForCalculator];
+    
+    originalTimeout = [KIFTestActor defaultTimeout];
+    [KIFTestActor setDefaultTimeout:0.01];
+  });
+  
+  beforeEach(^{
+    [calculatorVC resetCalculater];
+  });
+
   context(@"when it is initialized", ^{
-    
-    __block NSTimeInterval originalTimeout;
-    
-    beforeAll(^{
-      originalTimeout = [KIFTestActor defaultTimeout];
-      [KIFTestActor setDefaultTimeout:0.1];
-    });
     
     afterAll(^{
       [KIFTestActor setDefaultTimeout:originalTimeout];
@@ -72,7 +80,7 @@ describe(@"Calculator", ^{
       [tester waitForViewWithAccessibilityLabel:@"x"];
     });
     it(@"should show the UI element division sign", ^{
-      [tester waitForViewWithAccessibilityLabel:@"÷"];
+      [tester waitForViewWithAccessibilityLabel:@"/"];
     });
     it(@"should show the UI element equal sign", ^{
       [tester waitForViewWithAccessibilityLabel:@"="];
@@ -90,7 +98,7 @@ describe(@"Calculator", ^{
       [tester waitForViewWithAccessibilityLabel:@"display"];
     });
   });
-  
+
 });
 
 SpecEnd

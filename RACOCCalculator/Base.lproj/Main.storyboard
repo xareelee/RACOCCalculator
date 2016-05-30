@@ -6,10 +6,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculator View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalculatorView" id="BYZ-38-t0r" customClass="CalculatorViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -24,10 +24,10 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0wE-MV-823">
                                         <rect key="frame" x="20" y="0.0" width="560" height="166"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZ5-4Z-IQf">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="WZ5-4Z-IQf">
                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="166"/>
                                                 <accessibility key="accessibilityConfiguration" label="display"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="48"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -56,7 +56,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYv-YU-X7q">
                                                 <rect key="frame" x="450" y="0.0" width="150" height="83"/>
-                                                <accessibility key="accessibilityConfiguration" label="÷"/>
+                                                <accessibility key="accessibilityConfiguration" label="/"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <state key="normal" title="÷"/>
                                             </button>
