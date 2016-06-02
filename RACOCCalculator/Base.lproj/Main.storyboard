@@ -90,7 +90,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5F-Oi-cRD">
                                                 <rect key="frame" x="450" y="0.0" width="150" height="83"/>
-                                                <accessibility key="accessibilityConfiguration" label="x"/>
+                                                <accessibility key="accessibilityConfiguration" label="*"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <state key="normal" title="×"/>
                                             </button>

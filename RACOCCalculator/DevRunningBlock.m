@@ -8,8 +8,6 @@
 
 #import "DevRunningBlock.h"
 
-__attribute__(())
-
 
 @interface DevRunningBlock()
 @property (nonatomic) BOOL isTest;

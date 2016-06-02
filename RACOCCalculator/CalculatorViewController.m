@@ -7,9 +7,7 @@
 //
 
 #import "CalculatorViewController.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
-
-#import "RACMergeChannel.h"
+#import "Calculation.h"
 
 @interface CalculatorViewController ()
 
@@ -39,19 +37,19 @@
 
 
 // Internal
-@property (strong, nonatomic) NSString *currentValue;
-@property (strong, nonatomic) RACMergeChannel *updateCurrentValueChannel;
+@property (strong, nonatomic) RACTuple *calculatorState;
 @end
 
 @implementation CalculatorViewController
 
-- (void)resetCurrentValue:(NSString *)numberString {
-  self.currentValue = numberString;
+- (void)resetCalculater {
+  [self resetCalculaterWithState:initialCalculatorState()];
 }
 
-- (void)resetCalculater {
-  [self resetCurrentValue:@"0"];
+- (void)resetCalculaterWithState:(RACTuple *)state {
+  self.calculatorState = state;
 }
+
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -60,24 +58,8 @@
   {
     [self resetCalculater];
   }
-  
-  // Binding current value signal to the display label
-  RACSignal *currentValueSignal;
-  RACMergeChannel *updateCurrentValueChannel;
-  {
-    // Update `currentValue` use -[channel mergeSignal:] for multiple signals
-    updateCurrentValueChannel = [RACMergeChannel new];
-    RAC(self, currentValue) = updateCurrentValueChannel.followingTerminal;
-    self.updateCurrentValueChannel = updateCurrentValueChannel;
-    
-    // Observe values
-    currentValueSignal  = RACObserve(self, currentValue);
-    
-    // Update the display label with the current value
-    RAC(self, displayLabel.text) = currentValueSignal;
-  }
-  
-  // Input command & signals for 0-9 and decimal point
+
+  // Input command & signals for buttons
   RACSignal *inputSignal;
   {
     RACCommand *inputCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(UIButton *inputButton) {
@@ -96,60 +78,45 @@
     self.inputButton9.rac_command = inputCommand;
     self.inputButtonDecimalPoint.rac_command = inputCommand;
     
+    self.actionButtonAdd.rac_command = inputCommand;
+    self.actionButtonSubstract.rac_command = inputCommand;
+    self.actionButtonMultiply.rac_command = inputCommand;
+    self.actionButtonDivide.rac_command = inputCommand;
+    self.actionButtonEqual.rac_command = inputCommand;
+    
+    self.actionButtonClear.rac_command = inputCommand;
+    self.actionButtonPercentage.rac_command = inputCommand;
+    self.actionButtonTransitPosNeg.rac_command = inputCommand;
+    
     inputSignal = inputCommand.executionSignals.switchToLatest;
   }
   
-  // Calculated signal for input signal
+  // Calculator state Signal
+  RACSignal *calculatorStateSignal;
   {
-    RACSignal *newValueSignal =
-    [[inputSignal
-      zipWith:[currentValueSignal sample:inputSignal]]
-      map:^id(RACTuple *tuple) {
-        RACTupleUnpack(NSString *nextValue, NSString *currentValue) = tuple;
-        NSString *results;
-        if ([currentValue containsString:@"."] &&
-            [nextValue isEqualToString:@"."]) {
-          results = currentValue;
-        } else if ([currentValue isEqualToString:@"0"] &&
-                   ![nextValue isEqualToString:@"."]) {
-          results = nextValue;
-        } else {
-          results = [currentValue stringByAppendingString:nextValue];
-        }
-        debug_and_test_only(^{
-          NSLog(@"#input(%@) ( %@ + %@ ) => %@\t\t", nextValue, currentValue, nextValue, results);
-        });
-        return results;
-      }].publish.autoconnect;
-    
-    [updateCurrentValueChannel mergeSignal:newValueSignal];
+    calculatorStateSignal = RACObserve(self, calculatorState);
   }
   
-  // Clear Button
+  // Update the display label with the current value
   {
-    @weakify(self);
-    RACCommand *clearCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-      return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        @strongify(self);
-        [self resetCalculater];
-        debug_and_test_only(^{
-          NSLog(@"#clear");
-        });
-        [subscriber sendCompleted];
-        return nil;
-      }];
+    // Show current input; if nil, show current result; if nil, show `0`.
+    RAC(self, displayLabel.text) = [calculatorStateSignal map:^id(RACTuple *state) {
+      return stringValueForDisplay(state);
     }];
-    
-    self.actionButtonClear.rac_command = clearCommand;
   }
   
-  
-  
-  
-  debug_only(^{
+  // Calculate the next state
+  {
+    RACSignal *nextStateSignal;
+    nextStateSignal =
+    [[inputSignal
+      zipWith:[calculatorStateSignal sample:inputSignal]]
+      reduceEach:^id(NSString *input, RACTuple *state){
+        return handleInputForCalculatorState(state, input);
+      }];
     
-  });
-  
+    RAC(self, calculatorState) = nextStateSignal;
+  }
 }
 
 @end

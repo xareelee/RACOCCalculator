@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
-
 #ifdef DEBUG
 
 #define debug_only(...) _debug_only(__VA_ARGS__)

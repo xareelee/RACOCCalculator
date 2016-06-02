@@ -11,6 +11,10 @@
 
 @interface KIFUITestActor(Helper)
 
+// For CalculatorViewController test
 - (void)typeCalculatorWithExpectedStartValue:(NSString *)sequence sequence:(NSString *)startValue expectedResult:(NSString *)resultsValue;
 
 @end
+
+
+

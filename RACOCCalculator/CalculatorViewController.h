@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
+
 
 @interface CalculatorViewController : UIViewController
 
 - (void)resetCalculater;
-
-- (void)resetCurrentValue:(NSString *)numberString;
+- (void)resetCalculaterWithState:(RACTuple *)state;
 
 @end
 

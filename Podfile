@@ -12,6 +12,7 @@ target :RACOCCalculator do
 end
 
 target :RACOCCalculatorTests do
+  pod 'ReactiveCocoa'
   pod 'OCMock'
   pod 'Expecta'
   pod 'Expecta+OCMock'

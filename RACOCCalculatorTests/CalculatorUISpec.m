@@ -77,7 +77,7 @@ describe(@"Calculator", ^{
       [tester waitForViewWithAccessibilityLabel:@"-"];
     });
     it(@"should show the UI element multipl sign", ^{
-      [tester waitForViewWithAccessibilityLabel:@"x"];
+      [tester waitForViewWithAccessibilityLabel:@"*"];
     });
     it(@"should show the UI element division sign", ^{
       [tester waitForViewWithAccessibilityLabel:@"/"];
