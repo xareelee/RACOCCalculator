@@ -10,9 +10,11 @@
 #import <Expecta/Expecta.h>
 #import <KIF/KIF.h>
 
+#import "CalculatorState.h"
 #import "TestRootViewSetup.h"
 #import "Calculation.h"
 #import "TestHelper.h"
+
 
 SpecBegin(CalculatorArithmeticInput)
 
@@ -34,7 +36,8 @@ describe(@"Arithmetic operation", ^{
     
     beforeEach(^{
       initValue = @"532";
-      [calculatorVC resetCalculaterWithState:calculatorState(nil, nil, initValue, nil, nil)];
+      CalculatorState *state = stateForTuple(calculatorState(nil, nil, initValue, nil, nil));
+      [calculatorVC resetCalculaterWithState:state];
       
       UILabel *displayLabel = (UILabel *)[tester waitForViewWithAccessibilityLabel:@"display"];
       expect(displayLabel.text).to.equal(initValue);

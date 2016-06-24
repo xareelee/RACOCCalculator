@@ -7,7 +7,9 @@
 //
 
 #import "CalculatorViewController.h"
+#import "CalculatorState.h"
 #import "Calculation.h"
+
 
 @interface CalculatorViewController ()
 
@@ -37,16 +39,16 @@
 
 
 // Internal
-@property (strong, nonatomic) RACTuple *calculatorState;
+@property (strong, nonatomic) CalculatorState *calculatorState;
 @end
 
 @implementation CalculatorViewController
 
 - (void)resetCalculater {
-  [self resetCalculaterWithState:initialCalculatorState()];
+  [self resetCalculaterWithState:[CalculatorState initialState]];
 }
 
-- (void)resetCalculaterWithState:(RACTuple *)state {
+- (void)resetCalculaterWithState:(CalculatorState *)state {
   self.calculatorState = state;
 }
 
@@ -100,7 +102,7 @@
   // Update the display label with the current value
   {
     // Show current input; if nil, show current result; if nil, show `0`.
-    RAC(self, displayLabel.text) = [calculatorStateSignal map:^id(RACTuple *state) {
+    RAC(self, displayLabel.text) = [calculatorStateSignal map:^id(CalculatorState *state) {
       return stringValueForDisplay(state);
     }];
   }
@@ -111,8 +113,8 @@
     nextStateSignal =
     [[inputSignal
       zipWith:[calculatorStateSignal sample:inputSignal]]
-      reduceEach:^id(NSString *input, RACTuple *state){
-        return handleInputForCalculatorState(state, input);
+      reduceEach:^id(NSString *input, CalculatorState *state){
+        return combineInputIntoCalculatorState(input, state);
       }];
     
     RAC(self, calculatorState) = nextStateSignal;

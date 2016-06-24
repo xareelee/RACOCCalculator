@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
-
+@class CalculatorState;
 
 
 @interface CalculatorViewController : UIViewController
 
+@property (strong, nonatomic, readonly) CalculatorState *calculatorState;
+
 - (void)resetCalculater;
-- (void)resetCalculaterWithState:(RACTuple *)state;
+- (void)resetCalculaterWithState:(CalculatorState *)state;
 
 @end
 

@@ -10,6 +10,7 @@
 		111354BD1CFEC052001BD2C1 /* Calculation.m in Sources */ = {isa = PBXBuildFile; fileRef = 111354BC1CFEC052001BD2C1 /* Calculation.m */; };
 		111354BF1CFEC955001BD2C1 /* ArithmeticCalculationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 111354BE1CFEC955001BD2C1 /* ArithmeticCalculationSpec.m */; };
 		111354C21CFF3432001BD2C1 /* CalculationTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 111354C11CFF3432001BD2C1 /* CalculationTestHelper.m */; };
+		1142BEF21D1CF2E20056BC3E /* CalculatorState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1142BEF11D1CF2E20056BC3E /* CalculatorState.m */; };
 		11521D981CFDFEF300074DA0 /* CalculatorArithmeticInputSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 11521D971CFDFEF300074DA0 /* CalculatorArithmeticInputSpec.m */; };
 		1159F7F91CFBD1C500EFEA20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1159F7F81CFBD1C500EFEA20 /* main.m */; };
 		1159F7FC1CFBD1C500EFEA20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1159F7FB1CFBD1C500EFEA20 /* AppDelegate.m */; };
@@ -45,6 +46,8 @@
 		111354C01CFF3432001BD2C1 /* CalculationTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculationTestHelper.h; sourceTree = "<group>"; };
 		111354C11CFF3432001BD2C1 /* CalculationTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculationTestHelper.m; sourceTree = "<group>"; };
 		111FB6BD1CFD8E7F00FCA408 /* RACOCCalculator-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACOCCalculator-Prefix.pch"; sourceTree = "<group>"; };
+		1142BEF01D1CF2E20056BC3E /* CalculatorState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorState.h; sourceTree = "<group>"; };
+		1142BEF11D1CF2E20056BC3E /* CalculatorState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorState.m; sourceTree = "<group>"; };
 		11521D971CFDFEF300074DA0 /* CalculatorArithmeticInputSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorArithmeticInputSpec.m; sourceTree = "<group>"; };
 		1159F7F41CFBD1C500EFEA20 /* RACOCCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACOCCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1159F7F81CFBD1C500EFEA20 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				1159F7FB1CFBD1C500EFEA20 /* AppDelegate.m */,
 				1159F7FD1CFBD1C500EFEA20 /* CalculatorViewController.h */,
 				1159F7FE1CFBD1C500EFEA20 /* CalculatorViewController.m */,
+				1142BEF01D1CF2E20056BC3E /* CalculatorState.h */,
+				1142BEF11D1CF2E20056BC3E /* CalculatorState.m */,
 				111354BB1CFEC052001BD2C1 /* Calculation.h */,
 				111354BC1CFEC052001BD2C1 /* Calculation.m */,
 				1159F7F71CFBD1C500EFEA20 /* Supporting Files */,
@@ -413,6 +418,7 @@
 				1159F7FC1CFBD1C500EFEA20 /* AppDelegate.m in Sources */,
 				1159F7F91CFBD1C500EFEA20 /* main.m in Sources */,
 				11F99DA31CFC312C006C0569 /* DevRunningBlock.m in Sources */,
+				1142BEF21D1CF2E20056BC3E /* CalculatorState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,13 +8,27 @@
 
 #import <Foundation/Foundation.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
+@class CalculatorState;
 
 extern NSString const *CalculatorError;
 
 typedef void(^StepCalculatorState)(NSString *input, RACTuple *stepResultState);
 
 
-NSString *stringValueForDisplay(RACTuple *state);
+#pragma mark -
+
+/// Tranform calculator state to tuple
+RACTuple *tupleForState(CalculatorState *state);
+
+/// Transform tuple to calculator state
+CalculatorState *stateForTuple(RACTuple *tuple);
+
+/// Return the new state for the input to combine the current state.
+CalculatorState *combineInputIntoCalculatorState(NSString *input, CalculatorState *state);
+
+#pragma mark -
+
+NSString *stringValueForDisplay(CalculatorState *state);
 
 /// A helper constructor to return a tuple to represent a calculator state.
 ///
@@ -26,9 +40,6 @@ NSString *stringValueForDisplay(RACTuple *state);
 ///
 /// @return A tuple to represent a calculator state (ans, c_op, c_ip, l_op, acc)
 RACTuple *calculatorState(NSString *ans, NSString *c_op, NSString *c_ip, NSString *l_op, NSString *acc);
-
-/// A tuple with `(nil, nil, nil, nil, nil)`
-RACTuple *initialCalculatorState();
 
 /// Give a state an input to return a new state
 RACTuple *handleInputForCalculatorState(RACTuple *state, NSString *input);

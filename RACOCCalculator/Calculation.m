@@ -7,11 +7,12 @@
 //
 
 #import "Calculation.h"
+#import "CalculatorState.h"
 
 NSString const *CalculatorError = @"Error";
 
-NSString *stringValueForDisplay(RACTuple *state) {
-  return state[2] ?: state[0] ?: @"0";
+NSString *stringValueForDisplay(CalculatorState *state) {
+  return state.c_ip ?: state.ans ?: @"0";
 }
 
 RACTuple *calculatorState(NSString *ans, NSString *c_op, NSString *c_ip, NSString *l_op, NSString *acc) {
@@ -37,10 +38,6 @@ RACTuple *handleInputForCalculatorState(RACTuple *state, NSString *input) {
     nextState = initialCalculatorState();
   }
   
-  debug_and_test_only(^{
-    printf("(%s): %s -> %s\n", input.UTF8String, state.stateDescription.UTF8String, nextState.stateDescription.UTF8String);
-  });
-  
   return nextState;
 }
 
@@ -59,6 +56,35 @@ RACTuple *handleInputSequenceForCalculatorState(RACTuple *state, NSString *seque
   
   return currentState;
 }
+
+
+#pragma mark - CalculatorState
+
+/// (ans, c_op, c_ip, l_op, acc)
+RACTuple *tupleForState(CalculatorState *state) {
+  if (!state) {
+    return initialCalculatorState();
+  }
+  return RACTuplePack(state.ans, state.c_op, state.c_ip, state.l_op, state.acc);
+}
+
+CalculatorState *stateForTuple(RACTuple *tuple){
+  return [CalculatorState stateWithAnswer:tuple[0] currentOperator:tuple[1] currentInput:tuple[2] latestOperator:tuple[3] accumulatedValue:tuple[4]];
+}
+
+CalculatorState *combineInputIntoCalculatorState(NSString *input, CalculatorState *state) {
+  
+  RACTuple *stateTuple = tupleForState(state);
+  RACTuple *nextStateTuple = handleInputForCalculatorState(stateTuple, input);
+  CalculatorState *nextState = stateForTuple(nextStateTuple);
+  
+  debug_and_test_only(^{
+    printf("(%s): %s -> %s\n", input.UTF8String, state.debugDescription.UTF8String, nextState.debugDescription.UTF8String);
+  });
+  
+  return nextState;
+}
+
 
 
 #pragma mark - 
